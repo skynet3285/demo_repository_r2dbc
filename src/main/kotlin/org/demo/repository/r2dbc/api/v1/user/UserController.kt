@@ -44,7 +44,7 @@ class UserController(
     // 의도적으로 동일한 id 회원가입
     @GetMapping("/test")
     suspend fun test() {
-        // 만일, 의도적으로 데이터베이스를 끊으면, org.springframework.dao.TransientDataAccessResourceException가 발생한다
+        // 만일, 의도적으로 데이터베이스를 끊으면, org.springframework.dao.DataAccessResourceFailureException가 발생한다
 
         val validCreateUserDto =
             CreateUserDto(

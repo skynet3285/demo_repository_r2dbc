@@ -72,4 +72,6 @@ tasks.withType<Test> {
     useJUnitPlatform()
     // https://javadoc.io/doc/org.mockito/mockito-core/latest/org.mockito/org/mockito/Mockito.html#0.3
     jvmArgs("-XX:+EnableDynamicAgentLoading")
+    // https://kotest.io/docs/6.0/framework/project-config.html#setup
+    systemProperty("kotest.framework.config.fqn", "org.demo.repository.r2dbc.config.TestConfig")
 }
